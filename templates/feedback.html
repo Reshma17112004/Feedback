@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h3>Feedback Form</h3>    
+    <form action="/feedback" method="POST">
+        <div class="mb-3">
+            <label for="student_name">Name:</label>
+            <input type="text" id="student_name" class="form-control" name="student_name" required><br>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class='form-control' name="email" required><br>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="comments">Comments:</label>
+            <textarea id="comments" class='form-control' name="comments" required></textarea><br>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success">Submit Feedback</button>
+    </form>
+{% endblock %}
